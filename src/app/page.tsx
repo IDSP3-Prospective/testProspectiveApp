@@ -1,8 +1,3 @@
-// Database to be implemented
-import { db } from '@/db'
-import { scholarship } from '@/db/schema/scholarship'
-import { asc, desc } from 'drizzle-orm'
-
 import ScrollScholarshipcardSimple from './components/organisms/scrollscholarshipcardsimple'
 import BlockHeader2 from './components/atoms/block/block-header-2'
 
@@ -26,17 +21,14 @@ export default function Home() {
   )
 
   return (
-    // <div className="md:mt-[80px]">
-    //   <GreetingCard />
+    <main className="md:mt-[80px]">
+      <GreetingCard />
 
-    //   {/* Scholarship header */}
-    //   <div className="flex justify-center mx-auto w-[90%]">
-    //     <BlockHeader2 header="Scholarships For You" />
-    //   </div>
-    //     <ScrollScholarshipcardSimple list={listTest} />
-    // </div>
-    <main>
-      <p>Check</p>
+      {/* Scholarship header */}
+      <div className="flex justify-center mx-auto w-[90%]">
+        <BlockHeader2 header="Scholarships For You" />
+      </div>
+        <ScrollScholarshipcardSimple list={listTest} />
     </main>
   )
 }
