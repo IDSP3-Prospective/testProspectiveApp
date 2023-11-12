@@ -3,7 +3,7 @@ import ScrollScholarshipcardSimple from '@/app/components/organisms/scrollschola
 import BlockHeader2 from '@/app/components/atoms/block/block-header-2'
 import { scholarshipList } from '@/app/fakedb-mid'
 
-export default function Home() {
+export default function Scholarship() {
 
   const listTest = scholarshipList.map(item => {
     return {
