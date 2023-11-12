@@ -11,7 +11,7 @@ export default function Home() {
     <div>
 {/* Header */}
 {/* In header settings Icon*/}
-<Link href={`profile/settings`}></Link>
+<Link href={`profile/settings`}>Content</Link>
 {/* Saved | Applied */}
 {/* Search bar */}
 {/* Scholarship component params saved */}

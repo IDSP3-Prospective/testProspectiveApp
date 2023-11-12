@@ -61,12 +61,10 @@ export const scholarshipList = [
 }
 ]
 
-function getScholarshipByID(id: number) {
+export function getScholarshipByID(id: number) {
   
   const scholarship = scholarshipList[id - 1]
 
   // If scholarship is found, return it, otherwise return null or undefined
   return scholarship || null;
 }
-
-export { getScholarshipByID };
