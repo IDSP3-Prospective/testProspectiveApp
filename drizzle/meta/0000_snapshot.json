@@ -1,0 +1,244 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "id": "45751c37-0fe7-4228-9cb7-d1c853fa9db9",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "tables": {
+    "qualities": {
+      "name": "qualities",
+      "schema": "",
+      "columns": {
+        "QID": {
+          "name": "QID",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "Quality": {
+          "name": "Quality",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "requirements": {
+      "name": "requirements",
+      "schema": "",
+      "columns": {
+        "RID": {
+          "name": "RID",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "Requirement": {
+          "name": "Requirement",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "Strict": {
+          "name": "Strict",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "scholarships": {
+      "name": "scholarships",
+      "schema": "",
+      "columns": {
+        "SID": {
+          "name": "SID",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "Name": {
+          "name": "Name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "Type": {
+          "name": "Type",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "Source": {
+          "name": "Source",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "Amount": {
+          "name": "Amount",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "Description": {
+          "name": "Description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "Link": {
+          "name": "Link",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "user_quality": {
+      "name": "user_quality",
+      "schema": "",
+      "columns": {
+        "UQID": {
+          "name": "UQID",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "UID": {
+          "name": "UID",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "QID": {
+          "name": "QID",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "Specifics": {
+          "name": "Specifics",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "user_quality_UID_users_UID_fk": {
+          "name": "user_quality_UID_users_UID_fk",
+          "tableFrom": "user_quality",
+          "tableTo": "users",
+          "columnsFrom": [
+            "UID"
+          ],
+          "columnsTo": [
+            "UID"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "user_quality_QID_qualities_QID_fk": {
+          "name": "user_quality_QID_qualities_QID_fk",
+          "tableFrom": "user_quality",
+          "tableTo": "qualities",
+          "columnsFrom": [
+            "QID"
+          ],
+          "columnsTo": [
+            "QID"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "users": {
+      "name": "users",
+      "schema": "",
+      "columns": {
+        "UID": {
+          "name": "UID",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "Name": {
+          "name": "Name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "Email": {
+          "name": "Email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "Username": {
+          "name": "Username",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "Password": {
+          "name": "Password",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "TuitionCost": {
+          "name": "TuitionCost",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "SID": {
+          "name": "SID",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "users_SID_scholarships_SID_fk": {
+          "name": "users_SID_scholarships_SID_fk",
+          "tableFrom": "users",
+          "tableTo": "scholarships",
+          "columnsFrom": [
+            "SID"
+          ],
+          "columnsTo": [
+            "SID"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  }
+}
