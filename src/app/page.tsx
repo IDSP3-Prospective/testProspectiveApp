@@ -9,7 +9,7 @@ import BlockHeader2 from './components/atoms/block/block-header-2'
 import GreetingCard from './components/organisms/greetingcard'
 import { scholarshipList } from './fakedb-mid'
 
-export default async function Home() {
+export default function Home() {
   
   // Fake data
   const listTest = scholarshipList.map(item => {
