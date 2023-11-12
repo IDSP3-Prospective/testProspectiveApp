@@ -26,14 +26,17 @@ export default function Home() {
   )
 
   return (
-    <div className="md:mt-[80px]">
-      <GreetingCard />
+    // <div className="md:mt-[80px]">
+    //   <GreetingCard />
 
-      {/* Scholarship header */}
-      <div className="flex justify-center mx-auto w-[90%]">
-        <BlockHeader2 header="Scholarships For You" />
-      </div>
-        <ScrollScholarshipcardSimple list={listTest} />
-    </div>
+    //   {/* Scholarship header */}
+    //   <div className="flex justify-center mx-auto w-[90%]">
+    //     <BlockHeader2 header="Scholarships For You" />
+    //   </div>
+    //     <ScrollScholarshipcardSimple list={listTest} />
+    // </div>
+    <main>
+      <p>Check</p>
+    </main>
   )
 }
