@@ -3,11 +3,11 @@ import { db } from '@/db'
 import { scholarship } from '@/db/schema/scholarship'
 import { asc, desc } from 'drizzle-orm'
 
-import ScrollScholarshipcardSimple from './components/organisms/scrollscholarshipcardsimple'
-import BlockHeader2 from './components/atoms/block/block-header-2'
+import ScrollScholarshipcardSimple from '../components/organisms/scrollscholarshipcardsimple'
+import BlockHeader2 from '../components/atoms/block/block-header-2'
 
-import GreetingCard from './components/organisms/greetingcard'
-import { scholarshipList } from './fakedb-mid'
+import GreetingCard from '../components/organisms/greetingcard'
+import { scholarshipList } from '../fakedb-mid'
 
 export default function Home() {
   
